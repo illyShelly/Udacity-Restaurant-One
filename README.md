@@ -3,13 +3,13 @@ This project is developed for Google/Udacity Front End Web Development Nanodegre
 
 ## Table of Contents
 
-* [Project](#project overview)
+* [Project](#project)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Compatibility](#compatibility browser)
+* [Compatibility](#compatibility)
 
 
-## Project Overview
+## Project
 
 To made existing Restaurant Reviews App to be:
 
@@ -35,6 +35,6 @@ To start working with this project follow these steps:
 5. If you have Python 3.x. `python3 -m http.server 8000`
 6. Once server running, open the site in browser [http://localhost:8000/](http://localhost:8000/)
 
-## Compatibility Browser
+## Compatibility
 
-Testing web app on Google Chrome, is working on Safari as well.
+Testing web app on Google Chrome, is working on Safari browser as well.
