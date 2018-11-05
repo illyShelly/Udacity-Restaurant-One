@@ -1,11 +1,6 @@
 // 183 line added tabindex
 // register serviceWorker v main.js
 var staticCacheName = 'restaurant-v1';
-
-
-self.addEventListener('install', function (event) {
-  // Perform install steps
-});
 var urlsToCache = [
   '/',
   './index.html',
@@ -34,19 +29,50 @@ self.addEventListener('install', function(event) {
     // return promise with all cached urls
     caches.open(staticCacheName).then(function(cache) {
          console.log("Opened caches");
+      // return promise with all cached urls
+      // Caching the files after installing sw
       return cache.addAll(urlsToCache);
     }) // leave it
     );
 });
 
+
 self.addEventListener('activate', function(event) {
   event.waitUntil(self.clients.claim());
 });
 
+self.addEventListener('activate', function(event) {
+  // wait until activate serviceWorker until old cache is deleted
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      // .keys() gives promise with all cache names
+      return Promise.all(
+        // return all promise before activation
+        // using filter method to fullfill condition - differ name and starting with...
+        cacheNames.filter(function(cacheName) {
+            return cacheName.startsWith('restaurant-') && cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          // when filter applied creating new array using map method
+          // using map array method and then delete them all
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
+  // return Promise.all(allKey.map(function(key) {
+  //     if (staticCacheName.indexOf(key) === -1) {
+  //         return caches.delete(key);
+  //     }
+
+// respond from the cache when necessary
+// performs browser fetch, so results can come from cache
 self.addEventListener('fetch', function(event) {
   // math method if requested url is already in cache from installation
   // .then to get a promise
   event.respondWith(
+    // match request with cache
     caches.match(event.request, {ignoreSearch: true}).then(function(response) {
       if(response) {
         console.log(event.request, 'was found in cache');
@@ -56,9 +82,13 @@ self.addEventListener('fetch', function(event) {
         console.log('was not found, now FETCHING');
         return fetch(event.request);
       // adding to cache for later use
-
       }
-    }).catch(function(err) {
+    }).then(function (resp) {
+      return caches.open('v1').then(function(cache) {
+        cache.put(event.request, resp.clone());
+        return resp;
+        });
+      }).catch(function(err) {
       console.log(err, event.request);
     })
     );
