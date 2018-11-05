@@ -3,10 +3,10 @@ This project is developed for Google/Udacity Front End Web Development Nanodegre
 
 ## Table of Contents
 
-* [Project](#project)
+* [Project Overview](#project)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Compatibility](#compatibility)
+* [Compatibility Browser](#compatibility)
 
 
 ## Project Overview
@@ -28,12 +28,12 @@ To made existing Restaurant Reviews App to be:
 
 To start working with this project follow these steps:
 
-1. Git clone [repository](https://github.com/illyShelly/Udacity-Restaurant-One).
-2. Open the code directory `cd Restaurant-app`.
-3. In a terminal, check the version of Python you have `python -V`.
-4. If you have Python 2.x `python -m SimpleHTTPServer 8000` to start up simple HTTP server on your local computer.
-5. If you have Python 3.x. `python3 -m http.server 8000`.
-6. Once server running, open the site in browser [http://localhost:8000/](http://localhost:8000/).
+1. Git clone [repository](https://github.com/illyShelly/Udacity-Restaurant-One)
+2. Open the code directory `cd Restaurant-app`
+3. In a terminal, check the version of Python you have `python -V`
+4. If you have Python 2.x `python -m SimpleHTTPServer 8000` to start up simple HTTP server on your local computer
+5. If you have Python 3.x. `python3 -m http.server 8000`
+6. Once server running, open the site in browser [http://localhost:8000/](http://localhost:8000/)
 
 ## Compatibility Browser
 
