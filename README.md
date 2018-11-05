@@ -3,10 +3,10 @@ This project is developed for Google/Udacity Front End Web Development Nanodegre
 
 ## Table of Contents
 
-* [Project Overview](#project)
+* [Project](#project overview)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Compatibility Browser](#compatibility)
+* [Compatibility](#compatibility browser)
 
 
 ## Project Overview
@@ -37,4 +37,4 @@ To start working with this project follow these steps:
 
 ## Compatibility Browser
 
-Testing web app on Google Chrome, is working on Safari.
+Testing web app on Google Chrome, is working on Safari as well.
