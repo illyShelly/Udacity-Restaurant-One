@@ -169,8 +169,11 @@ class DBHelper {
   /**
    * Restaurant image URL.
    */
+   // UPDATE PATH FOR GITHUB PAGES ./img/...
+   // helper create anchor tag for img to be clickable
+   // missing dot ./img before /img to upload
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`./img/${restaurant.photograph}`);
   }
 
   /**
