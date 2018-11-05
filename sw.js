@@ -75,21 +75,20 @@ self.addEventListener('fetch', function(event) {
     // match request with cache
     caches.match(event.request, {ignoreSearch: true}).then(function(response) {
       if(response) {
-        console.log(event.request, 'was found in cache');
+        console.log(event.request, 'found in cache');
         return response;
       }
       else {
-        console.log('was not found, now FETCHING');
-        return fetch(event.request);
-      // adding to cache for later use
+        console.log(event.request, 'WAS NOT FOUND, now REQUESTED/FETCHING');
+        return fetch(event.request).then(function(res) {
+          return caches.open('restaurant-v1').then(function(cache) {
+            cache.put(event.request, res.clone());
+            return res;
+          }).catch(function(err) {
+            console.log(err, event.request);
+          })
+        })
       }
-    }).then(function (resp) {
-      return caches.open('v1').then(function(cache) {
-        cache.put(event.request, resp.clone());
-        return resp;
-        });
-      }).catch(function(err) {
-      console.log(err, event.request);
     })
     );
 });

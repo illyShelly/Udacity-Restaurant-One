@@ -107,7 +107,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: red;
+    color: #faff6e;
     text-decoration: none;
 }
 
@@ -251,12 +251,13 @@ nav h1 a {
   color:  rgba(51, 59, 63, 0.81);
   font-family: Arial,sans-serif;
   font-size: 20pt;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0;
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
   padding-left: 70pt; /* added */
+  letter-spacing: 2px; /* added */
 }
 #restaurant-img {
 	width: 45%; /* update */
@@ -298,7 +299,7 @@ nav h1 a {
   width: 100%;
   /*border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;*/
-  padding: 0 10px 0 10px;
+  /*padding: 0 10px 0 10px; makes white space mobile */
 
 }
 #reviews-container h2 {
@@ -332,6 +333,25 @@ nav h1 a {
   font-weight: 400;
   text-align: justify; /* added */
   font-size: 15px;
+}
+/* added */
+
+#reviews-list li p:nth-child(1) {
+  color: rgba(51, 59, 63, 0.81);
+  font-weight: 600;
+  display: inline-block;
+  width: 47%; /* fits for mobile */
+  /*text-align: left;*/
+}
+#reviews-list li p:nth-child(2) {
+  color: #999;
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+#reviews-list li p:nth-child(3) {
+  color: #5b8cb1;
+  text-align: right;
 }
 #restaurant-hours td {
   color: #666;
