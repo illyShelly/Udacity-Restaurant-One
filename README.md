@@ -1,5 +1,6 @@
 # Restaurant Reviews App - Stage 1
-This project is developed for Google/Udacity Front End Web Development Nanodegree (Project 6).
+This is Project #6 which is developed for Google/Udacity Front-End Web Development Nanodegree.
+Web application is available on [GithubPages](https://illyshelly.github.io/Udacity-Restaurant-One/)
 
 ## Table of Contents
 
