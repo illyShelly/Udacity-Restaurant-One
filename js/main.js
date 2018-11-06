@@ -177,6 +177,7 @@ createRestaurantHTML = (restaurant) => {
   link.className = 'clickimg';
   // needs to added class to manipulate just with "button" CSS
   const image = document.createElement('img');
+  image.alt = restaurant.name + " restaurant";
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   link.appendChild(image); // image as a child of anchor tag
