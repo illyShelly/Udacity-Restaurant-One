@@ -24,11 +24,12 @@ var urlsToCache = [
 
 self.addEventListener('install', function(event) {
   // waiting until installation is complete
+  console.log("Service worker instalation")
   event.waitUntil(
     //open caches matching cache name =>
     // return promise with all cached urls
     caches.open(staticCacheName).then(function(cache) {
-         console.log("Service worker:Opened caches, caching files");
+         console.log("Service worker: Opened caches, caching files");
       // return promise with all cached urls
       // Caching the files after installing sw
       return cache.addAll(urlsToCache);
@@ -36,10 +37,10 @@ self.addEventListener('install', function(event) {
     );
 });
 
-// activating listener
-self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
-});
+// // activating listener
+// self.addEventListener('activate', function(event) {
+//   event.waitUntil(self.clients.claim());
+// });
 
 self.addEventListener('activate', function(event) {
   // wait until activate serviceWorker until old cache is deleted
