@@ -28,7 +28,7 @@ self.addEventListener('install', function(event) {
     //open caches matching cache name =>
     // return promise with all cached urls
     caches.open(staticCacheName).then(function(cache) {
-         console.log("Opened caches");
+         console.log("Service worker:Opened caches, caching files");
       // return promise with all cached urls
       // Caching the files after installing sw
       return cache.addAll(urlsToCache);
@@ -54,6 +54,7 @@ self.addEventListener('activate', function(event) {
         }).map(function(cacheName) {
           // when filter applied creating new array using map method
           // using map array method and then delete them all
+          console.log("ServiceWorker cleaning old caches");
           return caches.delete(cacheName);
         })
       );
