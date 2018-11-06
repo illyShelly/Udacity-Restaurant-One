@@ -361,6 +361,9 @@ nav h1 a {
 /* ====================== Media Queries ====================== */
 
 @media (min-width: 319px) and (max-width: 690px) {
+  td, th {
+    font-size: 9pt ;
+  }
 
   nav {
     height: 100px;
