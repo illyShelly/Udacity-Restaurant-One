@@ -2,38 +2,38 @@
 /* CSS Document */
 
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11pt;
-	color: #333;
-	line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  color: #333;
+  line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
-	margin: 0;
-	position:relative;
+  background-color: #fdfdfd;
+  margin: 0;
+  position:relative;
 }
 ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
 }
 a {
-	color: #e8be70;
-	text-decoration: none;
+  color: #e8be70;
+  text-decoration: none;
 }
 a:hover, a:focus {
-	color: #b5cea3;
-	text-decoration: none;
+  color: #b5cea3;
+  text-decoration: none;
 }
 a img{
-	border: none 0px #fff;
+  border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 /*change structure of detail review page*/
 #maincontent {
@@ -260,7 +260,7 @@ nav h1 a {
   letter-spacing: 2px; /* added */
 }
 #restaurant-img {
-	width: 45%; /* update */
+  width: 45%; /* update */
   padding: 0 25%;
 }
 #restaurant-address {
@@ -278,7 +278,7 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 100%;
+  width: 100%;
 }
 #restaurant-container {
   /*border-bottom: 1px solid #d9d9d9;
