@@ -37,11 +37,6 @@ self.addEventListener('install', function(event) {
     );
 });
 
-// // activating listener
-// self.addEventListener('activate', function(event) {
-//   event.waitUntil(self.clients.claim());
-// });
-
 self.addEventListener('activate', function(event) {
   // wait until activate serviceWorker until old cache is deleted
   event.waitUntil(
@@ -62,11 +57,6 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
-
-  // return Promise.all(allKey.map(function(key) {
-  //     if (staticCacheName.indexOf(key) === -1) {
-  //         return caches.delete(key);
-  //     }
 
 // respond from the cache when necessary
 // performs browser fetch, so results can come from cache
