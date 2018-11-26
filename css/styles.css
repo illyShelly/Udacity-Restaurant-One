@@ -231,7 +231,7 @@ nav h1 a {
   right: 0;
   top: 80px;*/
   /*width: 50%;*/
-  height: 50vh;
+  height: 58vh;
   width: 100%;
 }
 .inside #map {
@@ -260,7 +260,7 @@ nav h1 a {
   letter-spacing: 2px; /* added */
 }
 #restaurant-img {
-  width: 45%; /* update */
+  width: 47%; /* update */
   padding: 0 25%;
 }
 #restaurant-address {
