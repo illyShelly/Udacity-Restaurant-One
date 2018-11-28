@@ -84,7 +84,6 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
-  name.classList.add(restaurant.cuisine_type.toLowerCase() + '-color');
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
