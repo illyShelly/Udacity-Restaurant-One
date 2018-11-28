@@ -6,6 +6,7 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
+  document.querySelector('#map-container').tabIndex = "-1";
 });
 
 /**
@@ -79,17 +80,21 @@ fetchRestaurantFromURL = (callback) => {
 /**
  * Create restaurant HTML and add it to the webpage
  */
+
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.classList.add(restaurant.cuisine_type.toLowerCase() + '-color');
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
+  image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-
+  // added alt for restaurant review picture
+    image.alt= restaurant.name + ' restaurant';
+    // image.setAttribute = ('alt', 'Image of ' + restaurant.name);
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
@@ -163,7 +168,8 @@ createReviewHTML = (review) => {
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
-
+  // added tabindex to review
+  li.tabIndex = '0';
   return li;
 }
 
