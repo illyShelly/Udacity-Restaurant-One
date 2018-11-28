@@ -7,14 +7,15 @@ var markers = []
 
 // registration serviceWorker
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-  .then(function() {
-    console.log('Registration works!');
-  })
-  .catch(function(err) {
-    console.log('Registration failed!');
-    console.error(err);
-  });
+  navigator.serviceWorker
+    .register('./sw.js')
+    .then(function() {
+      console.log('Registration works!');
+    })
+    .catch(function(err) {
+      console.log('Registration failed!');
+      console.error(err);
+    });
 }
 
 /**
@@ -100,6 +101,7 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
+  document.querySelector('#map-container').tabIndex = "-1";
 }
 /* window.initMap = () => {
   let loc = {
@@ -181,6 +183,8 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   link.appendChild(image); // image as a child of anchor tag
+  // tabIndex added to whole pic
+  link.tabIndex = '0';
   li.append(link);
 
 
@@ -199,8 +203,9 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+
 // adding tab index if used
-  more.tabIndex = '3';
+  // more.tabIndex = '0';
   li.append(more);
 
   return li
@@ -231,4 +236,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
