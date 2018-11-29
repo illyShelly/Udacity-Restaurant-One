@@ -187,8 +187,8 @@ createRestaurantHTML = (restaurant) => {
   link.tabIndex = '0';
   li.append(link);
 
-
-  const name = document.createElement('h1');
+  // set different level of importance
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -200,9 +200,12 @@ createRestaurantHTML = (restaurant) => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
+  // button for each of restaurant
+  // added for screen reader value without repetition of description -> View details (uncomment)
   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
+  // more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('aria-label', 'Details for ' + restaurant.name + ' restaurant' + restaurant.neighborhood);
 
 // adding tab index if used
   // more.tabIndex = '0';

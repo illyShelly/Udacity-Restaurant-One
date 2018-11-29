@@ -23,9 +23,13 @@
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="#restaurant-container" class="skip-link">Skip the map</a></li>
-    </ul>
+    <!-- put it to nav or give it meaning -->
+    <div class="wrap-nav" role="navigation">
+      <ul id="breadcrumb" >
+        <li><a href="#restaurant-container" class="skip-link">Skip the map</a></li>
+      </ul>
+    </div>
+
     <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
@@ -35,14 +39,14 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <!-- tabindex => jump from top to hour and reviews -->
     <!-- each li in restaurant_info.js has tabindex 0, jump on each of them -->
     <section id="restaurant-container" tabindex="-1">
-      <h1 tabindex="0" id="restaurant-name"></h1>
+      <h2 tabindex="0" id="restaurant-name"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
