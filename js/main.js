@@ -203,14 +203,13 @@ createRestaurantHTML = (restaurant) => {
   // button for each of restaurant
   // added for screen reader value without repetition of description -> View details (uncomment)
   const more = document.createElement('a');
-  // more.innerHTML = 'View Details';
+  more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.setAttribute('aria-label', 'Details for ' + restaurant.name + ' restaurant' + restaurant.neighborhood);
 
 // adding tab index if used
   // more.tabIndex = '0';
   li.append(more);
-
   return li
 }
 

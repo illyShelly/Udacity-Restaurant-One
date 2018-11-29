@@ -302,9 +302,9 @@ nav h1 a {
   /*padding: 0 10px 0 10px; makes white space mobile */
 
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #333b3fcf;
-  font-size: 24pt;
+  font-size: 21pt;
   font-weight: 300;
   letter-spacing: 2px; /* changed */
   padding-bottom: 1pt;
@@ -387,7 +387,7 @@ nav h1 a {
     padding-top: 15px;
   }
 
-  #reviews-container h2 {
+  #reviews-container h3 {
     font-size: 15pt;
     padding-left: 25px;
     padding-top: 15px;
